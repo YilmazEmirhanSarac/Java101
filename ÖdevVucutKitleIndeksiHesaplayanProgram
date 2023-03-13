@@ -1,0 +1,14 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        double boy,kilo,vki;
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Boyunuzu giriniz(örn: 1.72) : ");
+        boy = scanner.nextDouble();
+        System.out.print("Kilonuzu giriniz(örn: 84.6) : ");
+        kilo = scanner.nextDouble();
+        vki = kilo/(boy*boy);
+        System.out.println("Vücut kitle indeksiniz : " + vki);
+    }
+}
