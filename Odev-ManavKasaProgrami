@@ -1,0 +1,20 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        double armut = 2.14, elma = 3.67, domates = 1.11, muz = 0.95, patlican = 5.00, armutKg, elmaKg, domatesKg, muzKg, patlicanKg, odeme;
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Kaç kg armut almak istediğinizi giriniz : ");
+        armutKg = scanner.nextDouble();
+        System.out.print("Kaç kg elma almak istediğinizi giriniz : ");
+        elmaKg = scanner.nextDouble();
+        System.out.print("Kaç kg domates almak istediğinizi giriniz : ");
+        domatesKg = scanner.nextDouble();
+        System.out.print("Kaç kg muz almak istediğinizi giriniz : ");
+        muzKg = scanner.nextDouble();
+        System.out.print("Kaç kg patlıcan almak istediğinizi giriniz : ");
+        patlicanKg = scanner.nextDouble();
+        odeme = (armutKg*armut)+(elmaKg*elma)+(domatesKg*domates)+(muzKg*muz)+(patlicanKg*patlican);
+        System.out.println("Ödenecek tutar : " + odeme);
+    }
+}
