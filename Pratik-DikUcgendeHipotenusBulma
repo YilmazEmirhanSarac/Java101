@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner girdi = new Scanner(System.in);
+        int a,b,c,kenarlarinToplami;
+        double alan,u;
+        System.out.print("1. kenarı giriniz : ");
+        a = girdi.nextInt();
+        System.out.print("2. kenarı giriniz : ");
+        b = girdi.nextInt();
+        System.out.print("3. kenarı giriniz : ");
+        c = girdi.nextInt();
+        kenarlarinToplami = a+b+c;
+        u = kenarlarinToplami/2;
+        alan = Math.sqrt(u*(u-a)*(u-b)*(u-c));
+        System.out.println("Girmiş olduğunuz üçgenin alanı : " + alan);
+    }
+}
