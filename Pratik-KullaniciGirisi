@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        String orgName, orgPassword, userName, password, choise, newPassword;
+        String orgName, orgPassword, userName, password, choice, newPassword;
         orgName = ("patika");
         orgPassword = ("java123");
         Scanner inp = new Scanner(System.in);
@@ -19,8 +19,8 @@ public class Main {
         else if (userName.equals(orgName) && !password.equals(orgPassword)) {
             System.out.println("Hatalı şifre girdiniz !");
             System.out.print("Şifrenizi sıfırlamak ister misiniz? Y/N");
-            choise = inp.nextLine();
-            switch (choise){
+            choice = inp.nextLine();
+            switch (choice){
                 case "Y":
                     System.out.print("Yeni şifre giriniz : ");
                     newPassword = inp.nextLine();
