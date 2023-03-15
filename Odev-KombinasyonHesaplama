@@ -1,0 +1,26 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner inp = new Scanner(System.in);
+        int total, n,r,nfac = 1,rfac = 1,nMinusRFac = 1;
+
+        System.out.print("1. Sayıyı giriniz : ");
+        n = inp.nextInt();
+        System.out.print("2. Sayıyı giriniz : ");
+        r = inp.nextInt();
+
+        for (int i = 1; i <= n; i++){
+            nfac *= i;
+        }
+        for (int j = 1; j <=r; j++) {
+            rfac *= j;
+        }
+        for (int k = 1; k<=n-r; k++) {
+            nMinusRFac *= k;
+        }
+        total = nfac/(rfac * nMinusRFac);
+        System.out.println("Girdiğiniz sayıların kombinasyonu : " + total);
+
+    }
+}
