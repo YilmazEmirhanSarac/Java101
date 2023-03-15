@@ -1,0 +1,51 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        double km, cost = 0.10, price;
+        int age, tripType;
+
+        System.out.print("Kaç km gideceğinizi girin : ");
+        km = input.nextDouble();
+        System.out.print("Yaşınızı giriniz : ");
+        age = input.nextInt();
+        System.out.print("Yolculuk türünüzü seçin(1-Tek yön, 2-Gidiş dönüş) : ");
+        tripType = input.nextInt();
+
+        if ((km > 0) && (age > 0) && (tripType == 1 || tripType == 2)) {
+            switch (tripType) {
+                case 1:
+                    price = (km*0.10);
+                    if (age < 12 ) {
+                        price *= 0.5;
+                        System.out.println("Toplam tutar : " + price);
+                    } else if (age >= 12 && age <= 24) {
+                        price *= 0.9;
+                        System.out.println("Toplam tutar : " + price);
+                    }
+                    else {
+                        System.out.println("Toplam tutar : " + price);
+                    }
+                    break;
+                case 2:
+                    price = (km*0.10) * 2 * 0.8;
+                    if (age < 12) {
+                        price *= 0.5;
+                        System.out.println("Toplam tutar : " + price);
+                    }
+                    else if (age >= 12 && age <= 24) {
+                        price *= 0.9;
+                        System.out.println("Toplam tutar : " + price);
+                    }
+                    else {
+                        System.out.println("Toplam tutar : " + price);
+                    }
+                    break;
+            }
+        }
+        else {
+            System.out.println("Hatalı veri girdiniz! ");
+        }
+    }
+}
