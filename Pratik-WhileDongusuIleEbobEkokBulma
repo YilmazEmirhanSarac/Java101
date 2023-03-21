@@ -1,0 +1,29 @@
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        int number1,number2,big,small,ebob=1,ekok=1;
+        System.out.println("Ebob ekok hesaplama programına hoşgeldiniz. ");
+        System.out.print("İlk sayıyı giriniz: ");
+        number1 = input.nextInt();
+        System.out.print("İkinci sayıyı giriniz: ");
+        number2 = input.nextInt();
+        input.nextLine();
+
+        if (number1 > number2) {
+            small = number2;
+        } else {
+            small = number1;
+        }
+        int k = 1;
+        while (k <= small) {
+            if (number1%k == 0 && number2%k == 0) {
+                ebob = k;
+            }
+            k++;
+        }
+        System.out.println("Ebob : " + ebob);
+        ekok = (number2*number1) / ebob;
+        System.out.println("Ekok : " + ekok);
+    }
+}
