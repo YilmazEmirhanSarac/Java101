@@ -1,0 +1,21 @@
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        int number,perfect = 0;
+        System.out.print("Bir sayı giriniz : ");
+        number = input.nextInt();
+
+        for (int i = 1; i < number; i++) {
+            if (number%i == 0) {
+                perfect += i;
+                }
+        }
+        if(number == perfect) {
+            System.out.println(number + " mükemmel sayıdır. ");
+        }
+        else {
+            System.out.println(number + " mükemmel sayı değildir");
+        }
+    }
+}
