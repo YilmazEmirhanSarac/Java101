@@ -1,0 +1,21 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        int sayi1 = 0, sayi2 = 1,elemanSayisi;
+
+        elemanSayisi = input.nextInt();
+
+        System.out.print(elemanSayisi + " elemanlı fibonacci serisi : ");
+        System.out.print("0 1 ");
+        int i = 1,hesaplayici;
+        while (i <= elemanSayisi -1) {
+            hesaplayici = sayi1+sayi2;
+            sayi1 = sayi2;
+            sayi2 = hesaplayici;
+            System.out.print(hesaplayici + " ");
+            i++;
+        }
+    }
+}
